@@ -1,4 +1,4 @@
-class TweetsController < ApplicationController
+class Api::V1::TweetsController < ApplicationController
   def index
     cursor = params[:cursor]
     limit = params[:limit] || 10

@@ -7,6 +7,8 @@ gem 'rails', '~> 5.2.6'
 gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'mini_portile2', '2.6.1'
+gem 'sprockets-rails'
+ 
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -17,6 +19,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 5.0.2'
   gem 'faker'
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'simplecov'
 end
 
 group :development do

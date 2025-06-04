@@ -1,24 +1,28 @@
-<h1>Companies</h1>
+<div class="flex justify-center items-center bg-gray-100">
+  <div class="w-full max-w-4xl">
+    <h1 class="text-2xl font-bold text-center mb-6">Companies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td>
-          <%= link_to 'Show', company_path(company) %>
-          <%= link_to 'Edit', edit_company_path(company) %>
-          <%= link_to 'Delete', company_path(company), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table class="table-auto w-full bg-white shadow-md rounded-lg">
+      <caption class="text-lg font-semibold text-center mb-4">List of Companies</caption>
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="px-4 py-2 text-left">Name</th>
+          <th class="px-4 py-2 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @companies.each do |company| %>
+          <tr class="border-t">
+            <td class="px-4 py-2"><%= company.name %></td>
+            <td class="px-4 py-2">
+              <%= link_to 'Show', company_path(company), class: 'text-blue-500 hover:underline' %>
+              <%= link_to 'Edit', edit_company_path(company), class: 'text-green-500 hover:underline ml-2' %>
+              <%= link_to 'Delete', company_path(company), method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-500 hover:underline ml-2' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<%= link_to 'New Company', new_company_path %>
