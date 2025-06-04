@@ -90,6 +90,14 @@ Open the coverage report at `coverage/index.html`.
 
 -   `GET  api/v1/tweets`: List tweets with cursor-based pagination.
 
+## Screenshots
+
+### Home Page
+![Home Page](app/assets/images/foto1.png)
+
+### Companies Page
+![Companies Page](app/assets/images/foto2.png)
+
 ## Contributing
 
 Feel free to submit issues or pull requests to improve the system.
