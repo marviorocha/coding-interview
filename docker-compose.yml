@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app # só código fonte
+      - bundle_cache:/usr/local/bundle # mantém as gems instaladas no container
+    ports:
+      - "3000:3000"
+
+volumes:
+  bundle_cache:
